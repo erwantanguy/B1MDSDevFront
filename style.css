@@ -1,8 +1,12 @@
 body{
     background-color: blanchedalmond;
 }
-#effets div{
+#effets div,#tests div,#animate div{
     background: red;
     height: 100px;
     margin: 2px;
-    }
+}
+
+.alerte{
+    color:red;
+}
