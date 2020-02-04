@@ -1,7 +1,7 @@
 body{
     background-color: blanchedalmond;
 }
-#effets div,#tests div,#animate div{
+#effets div,#tests div,#animate div, #maBoite{
     background: red;
     height: 100px;
     margin: 2px;
@@ -9,4 +9,15 @@ body{
 
 .alerte{
     color:red;
+}
+
+.highlight{
+    background-color: yellow;
+}
+.bordure{
+    border:5px solid black;
+}
+
+.vert{
+    background-color: green !important;
 }

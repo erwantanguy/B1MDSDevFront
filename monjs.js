@@ -67,4 +67,18 @@ $(document).ready(function(){
         }
         console.log(i);
     });
+    
+    //TOGGLE EFFECTS
+    $('#theToggle').click(function(){
+        //$('#maBoite').toggle(2000);
+        $('#maBoite').toggleClass('bordure');
+    });
+    $('#toggle p').click(function(){
+        $(this).toggleClass('highlight');
+    });
+    $('#toggle p').hover(function(){
+        $('#maBoite').toggleClass('vert');
+    });
+    
 });
+//https://github.com/erwantanguy/B1MDSDevFront
