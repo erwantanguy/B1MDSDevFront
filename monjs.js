@@ -96,6 +96,15 @@ $(document).ready(function(){
         $('#toggle p').css('font-size', number + uom);
     });
     
+    //Photos
+    
+    $('#photos nav li').click(function(){
+        var numeroLigne = $(this).index();
+        console.log(numeroLigne);
+        $('#photos div img').hide();
+        $('#photos div img').eq(numeroLigne).show(2000);
+    });
+    
     
 //    console.log(os + number + uom);
 //    var index = $('#toggle p').eq();

@@ -25,3 +25,18 @@ body{
 #toggle p{
     font-size: 1em;
 }
+
+#photos div img{
+    display: none;
+}
+#photos nav ul{
+    list-style: none;
+    padding: 0;
+}
+#photos nav li{
+    margin-bottom: 10px;
+}
+#photos nav li img{
+    max-width: 100%;
+    height: auto;
+}
