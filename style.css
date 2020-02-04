@@ -21,3 +21,7 @@ body{
 .vert{
     background-color: green !important;
 }
+
+#toggle p{
+    font-size: 1em;
+}

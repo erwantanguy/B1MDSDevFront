@@ -75,10 +75,31 @@ $(document).ready(function(){
     });
     $('#toggle p').click(function(){
         $(this).toggleClass('highlight');
+//        var index = $(this).index();
+//        console.log(index);
     });
     $('#toggle p').hover(function(){
         $('#maBoite').toggleClass('vert');
     });
+    
+    //Agrandir ou diminuer la taille de la police
+    $('button.taille').click(function(){
+        var os = $('#toggle p').css('font-size');
+        var number = parseFloat(os);
+        var uom = os.slice(-2);
+        if(this.id=='pluspetit'){
+            number /= 1.4;
+        } else{
+            number *= 1.4;
+        }
+        console.log(number);
+        $('#toggle p').css('font-size', number + uom);
+    });
+    
+    
+//    console.log(os + number + uom);
+//    var index = $('#toggle p').eq();
+//    console.log(index);
     
 });
 //https://github.com/erwantanguy/B1MDSDevFront
