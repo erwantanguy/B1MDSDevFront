@@ -103,3 +103,7 @@ dist
 # TernJS port file
 .tern-port
 /nbproject/private/
+/nbproject/project.xml
+/nbproject/project.properties
+
+.gitignore
