@@ -105,5 +105,9 @@ dist
 /nbproject/private/
 /nbproject/project.xml
 /nbproject/project.properties
+/assets/**
+/package.json
+/gulpfile.js
+/js/**
 
 .gitignore

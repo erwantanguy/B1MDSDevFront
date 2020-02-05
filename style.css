@@ -28,6 +28,7 @@ body{
 
 #photos div img{
     display: none;
+    filter: sepia(1);
 }
 #photos nav ul{
     list-style: none;
@@ -36,7 +37,14 @@ body{
 #photos nav li{
     margin-bottom: 10px;
 }
+/* filtres image css https://yesyouweb.com/filtres-images-css3/ */
 #photos nav li img{
     max-width: 100%;
     height: auto;
+/*    filter: blur(1px) grayscale(1)  brightness(140%);*/
+    filter: invert(1);
+}
+#photos nav li img:hover{
+/*    filter: blur(0) grayscale(0) brightness(100%);*/
+    filter: invert(0);
 }

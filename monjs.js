@@ -1,5 +1,6 @@
 $(document).ready(function(){
     //$('h1').hide(5000);
+    //https://api.jquery.com
     
   for ( var i = 0; i < 5; i++ ) {
     $( '<div class="col-1">' ).appendTo( '#effets' );
