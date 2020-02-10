@@ -46,6 +46,10 @@ body h1 {
 .exemple3 {
   border-radius: 10px 55px 28px 4px; }
 
+.annuaire #liste {
+  margin: 60px 0 0; }
+  .annuaire #liste .card-columns {
+    column-count: 4; }
 .annuaire .nav-item {
   cursor: pointer;
   padding: 5px;
