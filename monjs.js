@@ -110,6 +110,11 @@ $(document).ready(function(){
 //    console.log(os + number + uom);
 //    var index = $('#toggle p').eq();
 //    console.log(index);
+
+//    console.log($('h1').attr('class'));
+
+    $('.annuaire article[data-sexe=h]').children('img').attr('src','images/homme-150.jpg');
+    $('.annuaire article[data-sexe=f]').children('img').attr('src','images/femme-150.jpg');
     
 });
 //https://github.com/erwantanguy/B1MDSDevFront
