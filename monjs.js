@@ -113,8 +113,35 @@ $(document).ready(function(){
 
 //    console.log($('h1').attr('class'));
 
+    
+    
+    
+// ANNUAIRE 
     $('.annuaire article[data-sexe=h]').children('img').attr('src','images/homme-150.jpg');
     $('.annuaire article[data-sexe=f]').children('img').attr('src','images/femme-150.jpg');
     
+    $('.annuaire option').click(function(){
+        var cat = $(this).attr('value');
+        console.log(cat);
+    });
+    $('.annuaire article').attr('data-name','');
+    if($('.annuaire article h5>span').html()){
+        var lettre = $('.annuaire article h5>span').html().charAt(0);
+        //console.log($(this));
+        var leparent = $(this).parent('h5').attr('class','test');
+        console.log(leparent);
+    }
+    $('.annuaire li').click(function(){
+        var alpha = $(this).html();
+        console.log(alpha);
+        if(alpha != 'TOUS'){
+            $('.annuaire article').hide();
+        }else{
+            $('.annuaire article').show();
+        }
+    });
+    
 });
+
+
 //https://github.com/erwantanguy/B1MDSDevFront
