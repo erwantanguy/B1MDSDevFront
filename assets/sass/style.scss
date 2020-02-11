@@ -77,16 +77,19 @@ body{
 
 //annuaire
 .annuaire{
+    nav,select{
+        margin:10px 0;
+    }
     #liste{
         margin: 60px 0 0;
         .card-columns{
-            column-count: 4;
+            column-count: 5;
         }
     }
     .nav-item{
         cursor: pointer;
-        padding: 5px;
-        margin: 0 5px;
+        padding: 7px;
+        margin: 0 2px;
         &:hover{
             color:red;
         }
