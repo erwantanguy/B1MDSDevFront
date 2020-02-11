@@ -120,10 +120,7 @@ $(document).ready(function(){
     $('.annuaire article[data-sexe=h]').children('img').attr('src','images/homme-150.jpg');
     $('.annuaire article[data-sexe=f]').children('img').attr('src','images/femme-150.jpg');
     
-    $('.annuaire select').click(function(){
-        var cat = $(this).children('option').attr('value');
-        console.log(cat);
-    });
+
     
     $('.annuaire li').click(function(){
         var alpha = $(this).html();
@@ -141,11 +138,21 @@ $(document).ready(function(){
         }
     });
     
+    $('select').on('change', function() {
+        //alert( this.value );
+        var cat = this.value;
+        console.log(cat);
+        if(cat != 'all'){
+            $('.annuaire article').hide();
+            $('p.nolist').hide();
+            $('.annuaire article[data-cat~='+cat+']').show();
+        }else{
+            $('.annuaire article').show();
+            $('p.nolist').hide();
+        }
+    });
+    
+    
 });
 
-$(document).delegate("select", "change", function() {
-    //capture the option
-    var $target = $("option:selected",$(this));
-    console.log($target);
-});
 //https://github.com/erwantanguy/B1MDSDevFront
