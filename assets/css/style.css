@@ -58,5 +58,10 @@ body h1 {
   margin: 0 2px; }
   .annuaire .nav-item:hover {
     color: red; }
+.annuaire .nolist {
+  border: 1px solid red;
+  padding: 10px;
+  width: 100%;
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */
