@@ -1,6 +1,7 @@
 /*
  *	Formation jQuery
- *	TP 4 : Évènements*/
+ *	TP 4 : ï¿½vï¿½nements
+*/
 
 // Encapsulation :
 (function ($) {
@@ -10,22 +11,22 @@
 	
 		/*
 			EXEMPLE 
-			Classe "active" sur les items cliqués dans le menu par onglet
+			Classe "active" sur les items cliquï¿½s dans le menu par onglet
 		*/
 		
 		// Variables contenant l'ensemble des liens du menu par onglet :
 		var $ongletItems = $(".onglets a") ;
 		
-		// Fonction déclenchées quand on clique sur l'un de ces items
+		// Fonction dï¿½clenchï¿½es quand on clique sur l'un de ces items
 		$ongletItems.click(function(){
 			
-			// On enlève la classe sur tous les items
+			// On enlï¿½ve la classe sur tous les items
 			$ongletItems.removeClass("active") ;
 			
-			// On met la classe active sur l'item qui a été cliqué
+			// On met la classe active sur l'item qui a ï¿½tï¿½ cliquï¿½
 			$(this).addClass("active") ;
 			
-			// Annule l'action par défaut
+			// Annule l'action par dï¿½faut
 			return false ;
 			
 		});
@@ -33,28 +34,74 @@
 		/*
 			EXERCICE 1
 			Cacher les tableaux.
-			Quand on clique sur un onglet, le tableau lié apparaît.
-			Le cas échéant, les autres tableaux disparaissent.
+			Quand on clique sur un onglet, le tableau liï¿½ apparaï¿½t.
+			Le cas ï¿½chï¿½ant, les autres tableaux disparaissent.
 			Astuce :
-			$cible.css("display","none") cache un élément et $cible.css("display","block") le remontre (pour un élément de type bloc).
+			$cible.css("display","none") cache un ï¿½lï¿½ment et $cible.css("display","block") le remontre (pour un ï¿½lï¿½ment de type bloc).
 		*/
-		
+		var tables = $("table").css("display","none");
+                //console.log(tables);
+                
+                $ongletItems.click(function(){
+                    //var $clique = $(this);
+                    //console.log($clique);
+                    //$("table").css("display","none");
+                    //selecteur = $clique.attr("href");
+                    //console.log(selecteur);
+                    //tables.filter(selecteur).css("display","block");
+                    tables.css("display","none").filter($(this).attr("href")).css("display","block");
+                    return false;
+                });
+                $ongletItems.eq(0).click() ;
 		/*
 			EXERCICE 2
-			Dans le conteneur («div#conteneur»), ajouter l'élément suivant :
+			Dans le conteneur (ï¿½div#conteneurï¿½), ajouter l'ï¿½lï¿½ment suivant :
 			<div id="loupe"></div>
-			Masqué par défaut, cet élément apparaît quand on survole une cellule. Il affiche alors le contenu de la cellule.		
+			Masquï¿½ par dï¿½faut, cet ï¿½lï¿½ment apparaï¿½t quand on survole une cellule. Il affiche alors le contenu de la cellule.		
 		*/
-			
+                        var $loupe = $('<div id="loupe"></div>').appendTo('#conteneur').css('display','none');
+                        //$('#conteneur').append('<div id="loupe"></div>');
+                        $('td').hover(
+                                function(){
+//                                    $loupe.css('display','block');
+//                                    var $text = $(this).text();
+//                                    console.log($text);
+//                                    $loupe.text($text);
+                                    $loupe.css('display','block').text($(this).text());
+                                },
+                                function(){
+                                    $loupe.css('display','none');
+                                }
+                    );
 		/*
 			EXERCICE 3
-			Quand une cellule est survolée, les cellules de la même ligne et de la même colonne prennent la classe on.
-			La cellule survolée prend la classe active.
+			Quand une cellule est survolï¿½e, les cellules de la mï¿½me ligne et de la mï¿½me colonne prennent la classe on.
+			La cellule survolï¿½e prend la classe active.
 			Astuce :
-			On retrouve les cellules d'une même colonne grâce à leur attribut headers. 
-			En effet, sa valeur est l'identifiant de la tête de la colonne.
+			On retrouve les cellules d'une mï¿½me colonne grï¿½ce ï¿½ leur attribut headers. 
+			En effet, sa valeur est l'identifiant de la tï¿½te de la colonne.
 		*/
+               
+               $('table').each(function(){
+                   var letableau = $(this);
+                   letableau.find('td').hover(
+                        function(){
+                            var $td = $(this);
+                            var $headers = $td.attr("headers") ;
+                            //console.log($headers);
+                            letableau.find('[headers='+$headers+']').addClass('on');
+                            letableau.find('#'+$headers).addClass('on');
+                            
+                            $td.closest("tr").children().addClass('on');
+                            
+                            $td.addClass('active');                            
+                        },
+                        function(){
+                            letableau.find('th,td').removeClass('on').removeClass('active');
+                        }
+                    );
+               });
 		
-	}); // Fin des instructions envoyées au chargement de la page
+	}); // Fin des instructions envoyï¿½es au chargement de la page
 	
 })(jQuery); // Fin de l'encapsulation

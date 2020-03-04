@@ -1,6 +1,7 @@
 /*
  *	Formation jQuery
- *	TP 5 : Animations *	D'après un script de ClarkLab (http://dmouronval.developpez.com/tutoriels/javascript/jquery/menu-anime/)
+ *	TP 5 : Animations
+ *	D'après un script de ClarkLab (http://dmouronval.developpez.com/tutoriels/javascript/jquery/menu-anime/)
 */
 
 // Encapsulation :
@@ -87,6 +88,16 @@
 			Masquer les items du menu déroulant.
 			Quand on clique sur le lien qui a la classe «menu-tete». Le menu se déplie vers le bas.
 		*/
+               $('#demo').css('overflow','hidden');
+               var $menu = $('.menu-deroulant ul');
+               
+               $menu.hide();
+               $menu.find('li:even').addClass('alt');
+               
+               $('.menu-tete').click(function(){
+                   $menu.slideToggle(500);
+                   return false;
+               });
 		
 		/*
 			EXERCICE 2 :
@@ -94,20 +105,43 @@
 			Quand on clique sur un lien du menu déroulant, le tableau lié apparaît avec un effet de votre choix.
 			Le cas échéant, les autres tableaux disparaissent.
 		*/
-
+               var $items = $menu.find('a');
+               var $tables = $('table').hide();
+               $items.click(function(){
+                   $tables.hide();
+                   $clique = $(this);
+                   var $active = $tables.filter($clique.attr('href'));
+                   $active.stop().css({position:"relative",left:"-1000px","z-index":"-1"}).show().animate({left:"200"},500).animate({left:"0"},100);
+                   return false;
+               });
 		/*
 			EXERCICE 3 :
 			Créer un effet quand on survole les items du menu déroulant 
 			(par exemple, modifier la propriété padding-left du style des liens).
 		*/
-		
+                var cssDefault = {
+                    paddingLeft : $items.eq(0).css("padding-left"),
+                    "color" : $items.eq(0).css("color"),
+                    "font-family" : $items.eq(0).css("font-family"),
+                    "font-size": $items.eq(0).css("font-size")
+                };
+		$items.hover(
+                    function(){
+                        $(this).css({"color":"rgb(255,0,0)","font-family":"serif","font-size":"2em"}).animate({paddingLeft:"+=20px"},500);
+                    },
+                    function(){
+                        $(this).stop().css(cssDefault);
+                    }
+                );
 		/*
 			EXERCICE 4 :
 			Désactiver les animations
 			Déclencher l'évènement click sur le premier item
 			Réactiver les animations			
 		*/
-		
+                $.fx.off = true;
+		$items.eq(0).click();
+                $.fx.off = false;
 	}); // Fin des instructions envoyées au chargement de la page
 	
 })(jQuery); // Fin de l'encapsulation
