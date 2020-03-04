@@ -111,5 +111,6 @@ dist
 /package.json
 /gulpfile.js
 /js/**
+.DS_Store
 
 .gitignore
