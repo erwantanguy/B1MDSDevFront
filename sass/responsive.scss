@@ -58,6 +58,12 @@ img{
     }
 }
 //https://css-tricks.com/snippets/css/complete-guide-grid/
+#maboiteBootStrap{
+    background-color: white;
+    &>*{
+        background-color: #ccc;
+    }
+}
 #maboite{
     background-color: white;
     &>*{
