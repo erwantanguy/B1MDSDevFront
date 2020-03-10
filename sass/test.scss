@@ -1,0 +1,11 @@
+body{
+    background: #efefef;
+    color: red;
+    a{
+        color: purple;
+        &:hover{
+            color: yellow;
+        }
+    }
+}
+
