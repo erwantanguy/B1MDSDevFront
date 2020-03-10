@@ -112,7 +112,9 @@ dist
 /gulpfile.js
 /js/**
 .DS_Store
-/jquery-corriges/
-/jquery-exercices/
-/jquery-exercices-encours/
+/jquery-corriges/**
+/jquery-exercices/**
+/jquery-exercices-encours/**
+jquery-corriges.zip
+jquery-exercices.zip
 .gitignore
