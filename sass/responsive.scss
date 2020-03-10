@@ -26,7 +26,7 @@ img{
 }
 #maboite{
     display: grid;
-    grid-template-rows: (3, 1fr);
+    /*grid-template-rows: (3, 1fr);*/
     nav{
         grid-row-start: 3;
     }
@@ -45,14 +45,14 @@ img{
     }
     #maboite{
         grid-template-columns: auto auto 200px;
-        grid-template-rows: (2, 1fr);
+        /*grid-template-rows: repeat(2, 1fr);*/
         &>*{
-            grid-row: span 1;
+            /*grid-row: span 1;*/
             grid-column: span 2;
         }
         nav{
             grid-row: span 3;
-            grid-column: span 1;
+            /*grid-column: span 1;*/
             grid-column-start: 3;
         }
     }
