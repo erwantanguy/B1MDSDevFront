@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,uCAAuC,CACnC,gBAAgB,CAAE,OAAO,CAE7B,MAAM,CACF,SAAS,CAAE,GAAG,CACd,KAAK,CAAE,MAAM,CACb,UAAU,CAAE,aAAa,CACzB,YAAO,CACH,KAAK,CAAE,IAAI,CACX,UAAU,CAAC,MAAM,CAErB,SAAE,CACE,WAAW,CAAE,GAAG",
-"sources": ["tp1.scss"],
-"names": [],
-"file": "tp1.css"
-}
