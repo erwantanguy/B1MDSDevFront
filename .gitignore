@@ -110,6 +110,7 @@ dist
 /assets/css/style.css.map
 /package.json
 /gulpfile.js
+/bundle.js
 /js/**
 .DS_Store
 /jquery-corriges/**
