@@ -1,8 +1,62 @@
-
-
-body{
-    background-color: red;
-    a{
-        color: purple;
+#onglets{
+    border-bottom: 2px solid #666;
+    margin-bottom: 20px;
+    ul{
+        padding: 0;
+        list-style: none;
+        li{
+            cursor: pointer;
+            text-align: center;
+            padding: 5px 10px;
+            &:hover,&.active{
+                color: #fff;
+                background: #666;
+            }
+        }
+    }
+}
+#trois{
+    margin-bottom: 25px;
+    article{
+        background-color: red;
+        border: solid 1px #000;
+        text-align: center;
+        padding: 0;
+        &:hover{
+            background-color: orange;
+        }
+    }
+}
+#videos{
+    margin-bottom: 60px;
+    nav{
+        ul{
+            padding: 0;
+            list-style: none;
+            li{
+                cursor: pointer;
+                margin-bottom: 10px;
+                &:hover{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+#table{
+    position: relative;
+    #loupe {
+	position:absolute;
+	right:5px;
+	top:-90px;
+	display:inline-block;
+	background:#eee;
+	border:1px solid #DD4B39;
+	font-size:4em;
+	font-weight:700;
+	padding:10px;
+    }
+    table{
+        margin-bottom: 25px;
     }
 }

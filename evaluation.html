@@ -5,22 +5,95 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/test.css" rel="stylesheet">
+        <link href="css/evaluation.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    TODO write content
-                    <a href="#">test</a>
-                </div>
+            <header class="row">
+                <h1 class="text-center col-12">Évaluation</h1>
+            </header>
+            <nav id="onglets" class="row">
+                <ul class="nav">
+                    <li class="active" data-cible="#trois">Les 3 blocs</li>
+                    <li data-cible="#videos">Les vidéos</li>
+                    <li data-cible="#table">Le tableau</li>
+                </ul>
+            </nav>
+            <div id="trois" class="row">
+                <article class="col-md-4 d-flex align-items-center justify-content-center">
+                    <header>
+                        <h3>TODO write content</h3>
+                        <a href="#">test</a>
+                    </header>
+                </article>
+                <article class="col-md-4 d-flex align-items-center justify-content-center">
+                    <header>
+                        <h3>TODO write content</h3>
+                        <a href="#">test</a>
+                    </header>
+                </article>
+                <article class="col-md-4 d-flex align-items-center justify-content-center">
+                    <header>
+                        <h3>TODO write content</h3>
+                        <a href="#">test</a>
+                    </header>
+                </article>
             </div>
+            <aside id="videos" class="row">
+                <header class="col-12">
+                    <h1 class="text-center">Les vidéos</h1>
+                </header>
+                <nav class="col-2">
+                    <ul>
+                        <li data-id="4HnBR4vgf28">Jouer MOINS = en dire PLUS !</li>
+                        <li data-id="1X0gDWX_CbY">6 SECRETS NON RÉSOLUS de HARRY POTTER</li>
+                        <li data-id="PJYTLHATxak">12 énigmes qui testeront ton type de personnalité</li>
+                        <li data-id="rulDLpfRD3I">Comment JIMMY PAGE nous a tous TROMPÉS - TUTO GUITARE</li>
+                        <li data-id="6aAIkhcvQ0w">Les Inconnus - Stade 2 (Football)</li>
+                        <li data-id="Ojpayx_5tm8">Porno, les dernières tendances - La drôle d’humeur de Marina Rollman</li>
+                    </ul>
+                </nav>
+                <article class="col-10">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4HnBR4vgf28" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </article>
+            </aside>
+            <section id="table" class="row">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
-        
-        
-        
-        <script src="evaluation.js"></script>
+        <script src="evaluation.min.js"></script>
     </body>
 </html>
